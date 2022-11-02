@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Table from "react-bootstrap/Table";
-import Papa from "papaparse";
-import { createPortal } from "react-dom";
 
 function Recordings(props) {
 	const { data } = props;
@@ -22,17 +20,18 @@ function Recordings(props) {
 					</thead>
 					<tbody>
 						{data.map((col, index) => {
-							if (col["RecordingEndTime"] != "")
-								return (
-									<tr key={index}>
-										<td>{index + 1}</td>
-										<td>{col["Participant"]}</td>
-										<td>{col["Session"]}</td>
-										<td>{col["StartTime"]}</td>
-										<td>{col["RecordingStartTime"]}</td>
-										<td>{col["RecordingEndTime"]}</td>
-									</tr>
-								);
+							return col["RecordingEndTime"] !== "" ? (
+								<tr key={index}>
+									<td>{index + 1}</td>
+									<td>{col["Participant"]}</td>
+									<td>{col["Session"]}</td>
+									<td>{col["StartTime"]}</td>
+									<td>{col["RecordingStartTime"]}</td>
+									<td>{col["RecordingEndTime"]}</td>
+								</tr>
+							) : (
+								<></>
+							);
 						})}
 					</tbody>
 				</Table>

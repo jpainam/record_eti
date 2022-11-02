@@ -3,9 +3,9 @@ import "./App.scss";
 import Recordings from "./components/Recordings";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-import { CSVLink, CSVDownload } from "react-csv";
+import { CSVLink } from "react-csv";
 import Timer from "./components/Timer";
-import { Alert, Button } from "react-bootstrap";
+import { Alert } from "react-bootstrap";
 
 function App() {
 	const [data, setData] = useState([]);

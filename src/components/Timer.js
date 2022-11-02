@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "../timer.scss";
 import RunningButton from "./RunningButton";
-import ProgressBar from "react-bootstrap/ProgressBar";
 import { Button } from "react-bootstrap";
 
 function Timer(props) {
@@ -21,7 +20,6 @@ function Timer(props) {
 		startTrialFn,
 		endTrialFn,
 		resetFn,
-		alertMessage
 	} = props;
 
 	return (
