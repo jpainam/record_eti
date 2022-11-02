@@ -1,5 +1,5 @@
 ### Installation
-- Install nodejs and make sure `npm` is available in the command line
+- Install [NodeJS](https://nodejs.org/en/download/) and make sure `npm` is available in the command line
 - In the project directory, run `npm install`
 
 ### Execution
